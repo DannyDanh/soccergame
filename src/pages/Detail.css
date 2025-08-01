@@ -1,0 +1,57 @@
+.detail-container {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.detail-container h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.detail-info {
+  display: grid;
+  row-gap: 1rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.detail-actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.edit-button,
+.back-button {
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.edit-button {
+  background-color: #007bff;
+}
+
+.edit-button:hover {
+  background-color: #0056b3;
+}
+
+.back-button {
+  background-color: #6c757d;
+}
+
+.back-button:hover {
+  background-color: #5a6268;
+}

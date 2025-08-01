@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { supabase } from '../client';
+import './Detail.css';
 
 export default function PlayerDetail() {
   const { id } = useParams();
@@ -17,14 +18,21 @@ export default function PlayerDetail() {
   if (!player) return <p>Loading...</p>;
 
   return (
-    <div>
+    <div className="detail-container">
       <h2>{player.name}</h2>
-      <p>Position: {player.position}</p>
-      <p>Rating: {player.rating}</p>
-      <p>Foot: {player.foot}</p>
-      <p>Country: {player.country}</p>
-      <p>Jersey #: {player.jersey_number}</p>
-      <Link to={`/players/${id}/edit`}>Edit</Link>
+      <div className="detail-info">
+        <p><strong>Position:</strong> {player.position}</p>
+        <p><strong>Rating:</strong> {player.rating}</p>
+        <p><strong>Preferred Foot:</strong> {player.foot}</p>
+        <p><strong>Country:</strong> {player.country}</p>
+        <p><strong>Jersey #:</strong> {player.jersey_number}</p>
+        <p><strong>Last Update:</strong> {new Date(player.created_at).toLocaleString()}</p>
+      </div>
+      <div className="detail-actions">
+        <Link to={`/players/${id}/edit`} className="edit-button">✏️ Edit</Link>
+        <Link to="/" className="back-button">← Back to Summary</Link>
+      </div>
     </div>
   );
+
 }

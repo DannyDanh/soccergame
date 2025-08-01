@@ -3,6 +3,7 @@ import CreatePlayer from './pages/CreatePlayer';
 import PlayerList from './pages/PlayerList';
 import PlayerDetail from './pages/PlayerDetail';
 import EditPlayer from './pages/EditPlayer';
+import './App.css';
 
 function App() {
   return (
